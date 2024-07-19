@@ -1,12 +1,13 @@
 import React from 'react'
 import EventDetails from '../../EventDetails'
 
-const EventDetail2 = () => {
+const EventDetail3 = () => {
   return (
     <div>
+      <div>
       <EventDetails
       image='/Frame 115.png'
-      name='BACARDI RESTAURANT AND BAR'
+      name='CoLab Jos Intro Meetup'
       aboutTitle='ABOUT:'
       about='Join us for an unforgettable experience at Bacardi, where creativity and excitement come together in a spectacular celebration. Enjoy a lineup of captivating performances, workshops, and vibrant exhibitions.'
       dateTitle='DATE:'
@@ -17,7 +18,8 @@ const EventDetail2 = () => {
       address=' 6 Sylvester Dabo Close, Apollo Crescent, South, Jos, Plateau.'
       />
     </div>
+    </div>
   )
 }
 
-export default EventDetail2
+export default EventDetail3

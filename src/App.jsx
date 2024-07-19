@@ -12,6 +12,8 @@ import Restaurants from "./components/Pages/Restaurants"
 import Hospitals from "./components/Pages/Hospitals";
 import RestaurantDetails from "./components/Pages/RestaurantDetails";
 import EventDetail1 from "./components/Pages/SubPages/Details/EventDetail1";
+import EventDetail2 from "./components/Pages/SubPages/Details/EventDetail2";
+import EventDetail3 from "./components/Pages/SubPages/Details/EventDetail3";
 
 function App() {
 
@@ -27,6 +29,8 @@ function App() {
             {/* <Route exact path="/" element={<Home/>}/> */}
             <Route path="/" element={<Page/>} />
             <Route path="/detail1" element={<EventDetail1/>} />
+            <Route path="/detail2" element={<EventDetail2/>} />
+            <Route path="/detail2" element={<EventDetail3/>} />
             <Route path="/current-event" element={<CurrentEvent/>} />
             <Route path="/upcoming-event" element={<UpcomingEvent/>} />
             <Route path="/now-in-jos" element={<NowIJ/>} />

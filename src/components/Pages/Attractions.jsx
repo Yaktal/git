@@ -4,6 +4,7 @@ import Nav from '../Nav';
 import Footer from '../Footer';
 import Dropdown from '../Dropdown';
 import Search from '../Search';
+import Filter from '../Filter';
 
 const Attractions = ({search}) => {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -40,7 +41,7 @@ const Attractions = ({search}) => {
     {/*  */}
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"></div>
 
-
+        <Filter/>
     
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {/* shopping card */}

@@ -28,7 +28,7 @@ const Nav = ({}) => {
       <Page search={search}/>
       <NowIJ search={search}/>
     </div> */}
-    <nav className="main">
+    <nav className="main relative">
       <nav className='flex justify-between lg:justify-evenly items-center p-5 font-poppins '>
           
             

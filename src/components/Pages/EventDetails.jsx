@@ -46,25 +46,27 @@ const EventDetails = (props) => {
             <div>
                 <h2 className="lg:text-[1.8rem] text-[1rem] font-bold lg:font-semibold lg:mt-4 mb-3 lg:mb-4">{props.name}</h2>
                 <div className="mb-4">
-                    <h3 className="text-[.8rem] lg:text-lg font-semibold mb-[.7rem]">{props.aboutTitle}</h3>
+                    <h3 className="text-[.8rem] lg:text-lg font-semibold mb-[.7rem] text-green-800">{props.aboutTitle}</h3>
                     <p className="text-[.8rem] lg:text-[1rem]">{props.about}
                     </p>
                 </div>
-                <div className="mb-4 flex items-center gap-1 ">
-                    <h3 className="text-[.8rem] lg:text-lg font-semibold">{props.dateTitle}</h3>
+                <div className="mb-4 gap-1 ">
+                    <h3 className="text-[.8rem] lg:text-lg font-semibold text-green-800">{props.dateTitle}</h3>
                     <p className="text-[.8rem] lg:text-[1rem]">{props.date}</p>
                 </div>
-                <div className="mb-4 flex items-center gap-1">
-                    <h3 className="text-[.8rem] lg:text-lg font-semibold">{props.timeTitle}</h3>
+                <div className="mb-4 gap-1">
+                    <h3 className="text-[.8rem] lg:text-lg font-semibold text-green-800">{props.timeTitle}</h3>
                     <p className="text-[.8rem] lg:text-[1rem]">{props.time}</p>
+                    <p className="text-[.8rem] lg:text-[1rem]">{props.time2}</p>
+                    <p className="text-[.8rem] lg:text-[1rem]">{props.time3}</p>
                 </div>
-                <div className="mb-6 flex lg:items-center gap-1">
-                    <h3 className="text-[.8rem] lg:text-lg font-semibold">{props.addressTitle}</h3>
+                <div className="mb-6 gap-1">
+                    <h3 className="text-[.8rem] lg:text-lg font-semibold text-green-800">{props.addressTitle}</h3>
                     <p className="text-[.8rem] lg:text-[1rem]">{props.address}</p>
                 </div>
-                <NavLink href="#"
+                <a href="https://www.google.com/maps/dir/9.947456,8.8891203/bacardi+jos+google+map/@9.9240768,8.8640693,14z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x105373732743f7b1:0x3cc2d31d9e47830b!2m2!1d8.8773518!2d9.9002682?entry=ttu"
                     className="bg-green-600 text-white px-2 py-2 lg:px-4 lg:py-2  rounded-lg hover:bg-green-800 text-[.75rem] lg:text-[1rem]">Get
-                    Directions</NavLink>
+                    Directions</a>
             </div>
         </div>
     </div>

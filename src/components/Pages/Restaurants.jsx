@@ -5,6 +5,7 @@ import Footer from '../Footer';
 import Dropdown from '../Dropdown';
 import Search from '../Search';
 import { NavLink } from 'react-router-dom';
+import Filter from '../Filter';
 
 const Restaurants = ({search}) => {
     
