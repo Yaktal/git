@@ -30,7 +30,7 @@ function App() {
             <Route path="/" element={<Page/>} />
             <Route path="/detail1" element={<EventDetail1/>} />
             <Route path="/detail2" element={<EventDetail2/>} />
-            <Route path="/detail2" element={<EventDetail3/>} />
+            <Route path="/detail3" element={<EventDetail3/>} />
             <Route path="/current-event" element={<CurrentEvent/>} />
             <Route path="/upcoming-event" element={<UpcomingEvent/>} />
             <Route path="/now-in-jos" element={<NowIJ/>} />

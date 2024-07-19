@@ -92,7 +92,7 @@ const Page = ({search}) => {
                         <p className="mt-2 text-[.7rem] lg:text-[1rem]">NASCO MARKETING COMPANY LTD</p>
                         <div className="flex justify-between pt-[1rem]">
                             <p className="mt-2 text-[.7rem] font-semibold lg:text-[1rem]">SAT, 29 JUNE</p>
-                            <NavLink to='/details' className="inline-block bg-green-600 text-white text-[.6rem] lg:text-[1rem] font-semibold py-2  px-3 rounded hover:bg-green-800">View Details</NavLink>
+                            <NavLink to='/detail3' className="inline-block bg-green-600 text-white text-[.6rem] lg:text-[1rem] font-semibold py-2  px-3 rounded hover:bg-green-800">View Details</NavLink>
                         </div>
                     </div>
                 </div>
@@ -103,7 +103,7 @@ const Page = ({search}) => {
                         <p class="mt-2 text-[.7rem] lg:text-[1rem]">NASCO MARKETING COMPANY LTD</p>
                         <div className="flex justify-between pt-[1rem]">
                             <p className="mt-2 text-[.7rem] font-semibold lg:text-[1rem]">SAT, 29 JUNE</p>
-                            <NavLink to='/detail2' className="inline-block bg-green-600 text-white text-[.6rem] lg:text-[1rem] font-semibold py-2  px-3 rounded hover:bg-green-800">View Details</NavLink>
+                            <NavLink to='/detail3' className="inline-block bg-green-600 text-white text-[.6rem] lg:text-[1rem] font-semibold py-2  px-3 rounded hover:bg-green-800">View Details</NavLink>
                         </div>
                     </div>
                 </div>
