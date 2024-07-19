@@ -17,11 +17,11 @@ const Page = ({search}) => {
     
   return (
     <div className={`app font-poppins ${search ? 'no-scroll' : ''}`}>
-        {/* <Nav/> */}
+        <nav className='h-[8rem]'></nav>
         {<div>
             <div >
       <Images />
-      <div className="page">
+      <div className="">
         <div className="text-center text-black px-[1rem]">
           <h1 className="lg:text-4xl text-xl font-semibold leading-[auto] pt-[3rem]">DON'T WASTE A MINUTE!</h1>
           <p className="mt-4 lg:text-[1.125rem] text-[.9rem]">Explore <span className="text-green-500">beautiful</span> attractions and enjoy all the <span className="text-green-500">fun</span> activities that Jos City has for you.</p>     

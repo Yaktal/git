@@ -5,6 +5,7 @@ import {cards} from '../Cards'
 import Footer from '../Footer';
 import Dropdown from '../Dropdown';
 import Filter from '../Filter';
+import { NavLink } from 'react-router-dom';
 // import Search from '../Search';
 
 const NowIJ = ({search}) => {
@@ -35,8 +36,8 @@ const NowIJ = ({search}) => {
        
 <>
 {/* <Nav/>  */}
-
-{<div className='font-poppins'>
+<nav className='h-[8rem]'></nav>
+{<div className='nav-page font-poppins'>
   <div className="relative bg-cover bg-center min-h-[6rem]">
     <div className=" bg-contain bg-no-repeat w-[100%] min-h-[6rem] lg:bg-cover lg:min-h-[23rem] lg:w-full lg:bg-center">
         <img src="/Frame 123.png" alt="" />
@@ -82,7 +83,7 @@ const NowIJ = ({search}) => {
                 <p className="text-[.75rem] lg:text-[1rem] text-gray-600 pb-1">{item.Rate}</p>
                 <p className="text-[.75rem] lg:text-[1rem] text-gray-600">{item.Address}</p>
                 <div className="flex items-center justify-between mt-4">
-                  <a href="details.html" className="bg-green-200 text-green-600 b-green-500 px-2 py-[.4rem] lg:px-4 lg:py-2 rounded-lg hover:text-green-700 text-[.75rem] lg:text-[1rem]">More Info</a>
+                  <NavLink to="/detail2" className="bg-green-200 text-green-600 b-green-500 px-2 py-[.4rem] lg:px-4 lg:py-2 rounded-lg hover:text-green-700 text-[.75rem] lg:text-[1rem]">More Info</NavLink>
                   <a href="#" className="bg-green-700 text-white px-2 py-[.4rem] lg:px-4 lg:py-2 rounded-lg text-[.75rem] lg:text-[1rem]">Get Directions</a>
                 </div>
               </div>

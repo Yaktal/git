@@ -95,9 +95,16 @@
 
 }
 
-nav {
-  /* background-color: white;
-  position: absolute; */
+.main {
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  
+}
+
+.nav-page {
+  /* margin-top: ; */
 }
 
 .dropdown-menu {

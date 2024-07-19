@@ -17,8 +17,8 @@ const Hospitals = () => {
        
 <>
 {/* <Nav/>  */}
-
-<div className="relative bg-cover bg-center min-h-[6rem]">
+<nav className='h-[8rem]'></nav>
+<div className="nav-page relative bg-cover bg-center min-h-[6rem]">
     <div className=" bg-contain bg-no-repeat w-[100%] min-h-[6rem] lg:bg-cover lg:min-h-[23rem] lg:w-full lg:bg-center">
         <img src="/Frame 123.png" alt="" />
     </div>

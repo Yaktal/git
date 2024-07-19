@@ -24,11 +24,7 @@ const Nav = ({}) => {
     
     
     <>
-    {/* <div className={`hidden`}>
-      <Page search={search}/>
-      <NowIJ search={search}/>
-    </div> */}
-    <nav className="main relative">
+    <nav className="main ">
       <nav className='flex justify-between lg:justify-evenly items-center p-5 font-poppins '>
           
             
@@ -67,22 +63,19 @@ const Nav = ({}) => {
             {/* <!-- Navigation Links for Desktop --> */}
             <div className=" hidden md:flex gap-4 font-semibold ">
               <div className="relative-group">
-                <NavLink to='/now-in-jos' className="text-black hover:text-green-600 font-poppins">Now In Jos</NavLink>
+                <NavLink to='/now-in-jos' className="text-black hover:text-green-600 font-poppins">NOW IN JOS</NavLink>
               </div>
               <div className="relative-group">
-              <NavLink to='/accomodation' className="text-black hover:text-green-600">Hotels</NavLink>
+              <NavLink to='/accomodation' className="text-black hover:text-green-600">HOTELS</NavLink>
               </div>
               <div className="relative group">
-              <NavLink to='/restaurants' className="text-black hover:text-green-600">Restaurants</NavLink>
+              <NavLink to='/restaurants' className="text-black hover:text-green-600">RESTAURANTS</NavLink>
               </div>
               <div className="relative group">
-              <NavLink to='/shopping' className="text-black hover:text-green-600">Shopping</NavLink>
+              <NavLink to='/shopping' className="text-black hover:text-green-600">SHOPPING</NavLink>
               </div>
               <div className="relative group">
-              <NavLink to='/attractions' className="text-black hover:text-green-600">Attractions</NavLink>
-              </div>
-              <div className="relative group">
-              <NavLink to='/hospitals' className="text-black hover:text-green-600">Hospitals</NavLink>
+              <NavLink to='/attractions' className="text-black hover:text-green-600">ATTRACTIONS</NavLink>
               </div>
             </div>
           </div>
