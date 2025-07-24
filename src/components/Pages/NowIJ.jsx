@@ -30,12 +30,13 @@ const NowIJ = ({search}) => {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const URL = 'https://documenter.getpostman.com/view/36750929/2sA3kSni9m#418e538c-1683-458b-b80b-2bbb271c25ad'
 
   // Fetch data from API
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://documenter.getpostman.com/view/36750929/2sA3kSni9m#418e538c-1683-458b-b80b-2bbb271c25ad');
+        const response = await fetch('');
         const result = await response.json();
         setEvents(result);
         setLoading(false);
@@ -113,7 +114,7 @@ const NowIJ = ({search}) => {
           <div key={event.id} className="bg-gray-100 border border-gray-200 rounded-lg overflow-hidden">
             <img src={event.image1} alt={event.title} className="w-full min-h-48 object-cover lg:p-4" />
             <div className="p-4">
-              <h3 className="text-[1rem] lg:text-xl font-bold text-gray-800 pb-2">{event.title}</h3>
+              <h3 className="text-[1rem] lg:text-xl font-bold text-gray-800 pb-2">{event.title}</h3>  
               <p className="text-[.75rem] lg:text-[1rem] text-gray-600 pb-1">{event.address}</p>
               <p className="text-[.75rem] lg:text-[1rem] text-gray-600">{event.date}</p>
               <div className="flex items-center justify-between mt-4">

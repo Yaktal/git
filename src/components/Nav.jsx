@@ -1,22 +1,18 @@
 import React, { useState } from 'react'
-import Logo from './Logo';
-// import Dropdown from './Dropdown';
-import Page from './Pages/Page';
 import { NavLink } from 'react-router-dom';
-import { data } from './Data';
-import NowIJ from './Pages/NowIJ';
-import Home from './Home';
 import Search from './Search';
+import { CIcon } from "@coreui/icons-react";
+import { cilChevronRight, cilHamburgerMenu, cilX } from "@coreui/icons";
 
 const Nav = ({}) => {
   // const [openDropdown, setOpendropdown] = useState(false)
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false); 
   
   const [search, setSearch] = useState('');
   
   function hideNav() {
     search(true)
-  }
+  } 
   // <NowIJ search={search}/>
   // <Page search={search} />
   
@@ -25,11 +21,11 @@ const Nav = ({}) => {
     
     <>
     <nav className="main ">
-      <nav className='flex justify-between lg:justify-evenly items-center p-5 font-poppins '>
+      <nav className='flex justify-between lg:justify-evenly items-center p-5 font-poppins shadow-md'>
           
             
           <div>
-              <NavLink to='/'><img src="JCITY LOGO 1.png" alt="Logo" className="h-[100px] w-[70px] float-left " /></NavLink>
+              <NavLink to='/'><img src="jlogo.png" alt="Logo" className="h-[5rem] w-[70px] float-left " /></NavLink>
             </div>
         
           <div className="flex items-center space-x-4">
@@ -42,22 +38,10 @@ const Nav = ({}) => {
               
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="relative focus:outline-none"
+                className="relative focus:outline-none transition"
               >
-                <svg
-                  className="w-6 h-6 text-black"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16m-7 6h7"
-                  />
-                </svg>
+                {isMenuOpen===true?<CIcon className="h-7 mr-2 transform transition-transform duration-300 rotate-180" icon={cilX} size=""/>:<CIcon className="h-7 mr-2" icon={cilHamburgerMenu} size=""/>}
+                
               </button>
             </div>
             {/* <!-- Navigation Links for Desktop --> */}
@@ -87,25 +71,30 @@ const Nav = ({}) => {
         </nav>
         {/* <!-- Mobile Menu --> */}
         {isMenuOpen===true? (
-          <div className="md:hidden flex justify-between p-10">
+          <div className="md:hidden flex justify-between p-10 mobileMenu">
             {/* <nav className='h-[8rem]'></nav> */}
-            <div className=''>
+            <div className='font-semibold'>
               
             <div className="relative-group">
-                <NavLink to='/now-in-jos' className="text-black hover:text-green-600">Now In Jos</NavLink>
+                <NavLink to='/now-in-jos' className="text-black hover:text-gray-700 flex items-center">NOW IN JOS <CIcon className="h-5 ml-2" icon={cilChevronRight} size=""/></NavLink>
               </div>
+              <div className='border border-black'></div>
               <div className="relative-group">
-              <NavLink to='/accomodation' className="text-black hover:text-green-600">Accomodation</NavLink>
+              <NavLink to='/accomodation' className="text-black hover:text-gray-700 flex items-center">WHERE TO STAY <CIcon className="h-5 ml-2 text-danger" icon={cilChevronRight} size=""/></NavLink>
               </div>
+              <div className='border border-black'></div>
               <div className="relative-group">
-              <NavLink to='/restaurants' className="text-black hover:text-green-600">Restaurants</NavLink>
+              <NavLink to='/restaurants' className="text-black hover:text-gray-700 flex items-center">EAT & DRINK <CIcon className="h-5 ml-2 text-danger" icon={cilChevronRight} size=""/></NavLink>
               </div>
+              <div className='border border-black'></div>
               <div className="relative-group">
-              <NavLink to='/shopping' className="text-black hover:text-green-600">Shopping</NavLink>
+              <NavLink to='/shopping' className="text-black hover:text-gray-700 flex items-center">SHOPPING <CIcon className="h-5 ml-2 text-danger" icon={cilChevronRight} size=""/></NavLink>
               </div>
-              <div className="relative-group">
-              <NavLink to='/attractions' className="text-black hover:text-green-600">Attractions</NavLink>
+              <div className='border border-black'></div>
+              <div className="relative-group ">
+              <NavLink to='/attractions' className="text-black hover:text-gray-700 flex items-center">MAPS & GUIDES <CIcon className="h-5 ml-2 text-danger" icon={cilChevronRight} size=""/></NavLink>
               </div>
+              <div className='border border-black'></div>
             </div>
             
             <div className=''>

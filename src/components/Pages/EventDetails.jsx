@@ -20,6 +20,45 @@ export const cards =[
 ]
 
 const EventDetails = (props) => {
+    const images = [
+    {
+      src: 'Crest.png',
+      alt: 'Image 1',
+    },
+    {
+      src: 'Crest.png',
+      alt: 'Image 2',
+    },
+    {
+      src: 'Crest.png',
+      alt: 'Image 3',
+    },
+    // Add more images as needed
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleImageClick = (index) => {
+    setCurrentImageIndex(index);
+    setIsModalOpen(true);
+  };
+
+  const handleNextClick = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const handlePrevClick = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
   return (
     <>
       <div className="container mx-auto px-4 py-8">
@@ -35,13 +74,27 @@ const EventDetails = (props) => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-[3rem]">
             <div className="flex justify-between gap-2 lg:gap-3 ">
-                <div>
-                    <img src="/valada.png" alt="Hotel Image" className="rounded-[.3rem] shadow-md h-full"/>
-                </div>
-                <div className="flex flex-col justify-between gap-2 lg:gap-3">
-                <img src="/valada.png" alt="Hotel Image" className="rounded-[.3rem] shadow-md h-full "/>
-                <img src="/valada.png" alt="Hotel Image" className="rounded-[.3rem] shadow-md h-full"/>
-                </div>
+            <div className="image-grid">
+        {images.map((image, index) => (
+          <img
+            key={index}
+            src={image.src}
+            alt={image.alt}
+            className="thumbnail"
+            onClick={() => handleImageClick(index)}
+          />
+        ))}
+      </div>
+
+      {isModalOpen && (
+        <div className="modal">
+          <span className="close" onClick={handleCloseModal}>&times;</span>
+          <img src={images[currentImageIndex].src} alt={images[currentImageIndex].alt} className="modal-content" />
+          <div className="caption">{images[currentImageIndex].alt}</div>
+          <button className="prev" onClick={handlePrevClick}>❮</button>
+          <button className="next" onClick={handleNextClick}>❯</button>
+        </div>
+      )}
             </div>
             <div>
                 <h2 className="lg:text-[1.8rem] text-[1rem] font-bold lg:font-semibold lg:mt-4 mb-3 lg:mb-4">{props.name}</h2>

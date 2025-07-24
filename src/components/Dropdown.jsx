@@ -14,7 +14,6 @@ const Dropdown = ({ names, options, isOpen, onToggle }) => {
   const handleOptionClick = () => {
     isOpen(false);
   };
-
   return (
     <div className={`dropdown text-3xl font-bold ${isOpen&&"text-green-800 hover:text-green-800"}`}   >
       <button onClick={handleMouseClick} className="dropdown-toggle">{names}<img className='mt-5' src='ArrowVector.png' alt=""/></button>

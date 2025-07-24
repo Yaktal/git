@@ -8,15 +8,13 @@ const RestaurantDetails = (props) => {
       <EventDetails
       image='/Frame 115.png'
       name='BACARDI'
-      aboutTitle='ABOUT:'
+      aboutTitle='ABOUT'
       about='Join us for an unforgettable experience at Bacardi, where creativity and excitement come together in a spectacular celebration. Enjoy a lineup of captivating performances, workshops, and vibrant exhibitions.'
-      // dateTitle='DATE:'
-      // date='25th July to 1st August, 2024'
-      timeTitle='HOURS:'
+      timeTitle='HOURS'
       time='Tuesday - Saturday     10am - 10pm'
       time2='Sunday                 11am - 10pm'
       time3='Monday                 3pm - 10pm'
-      addressTitle='ADDRESS:'
+      addressTitle='ADDRESS'
       address=' 6 Sylvester Dabo Close, Apollo Crescent, South, Jos, Plateau.'
       />
     </div>
