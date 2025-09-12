@@ -15,7 +15,7 @@ const insertSearch = ({search}) => {
 }
 
 
-const Page = ({search}) => {
+const Shopij = ({search}) => {
     
   return (
     <div className={`app font-poppins ${search ? 'no-scroll' : ''}`}>
@@ -24,22 +24,14 @@ const Page = ({search}) => {
             <div className="lg:text-xl">
       <ImageSlider />
       <div className="">
-        <div className="text-center text-black px-[1rem]">
-          <h1 className="lg:text-4xl text-3xl font-bold leading-[auto] pt-[3rem]">Founded By J City</h1>
-          <p className="mt-4 lg:text-[1.125rem]">Don't miss the chance to discover the City's legendary past and the stories shaping its future</p>     
-        </div>
+        
         
         {/* <!-- Attractions Section --> */}
-    <section class="px-[1rem]">
     
-            <div className="text-center mt-[2rem]">
-                <NavLink to='/now-in-jos' className="inline-block bg-black-600 font-semibold text-[.95rem] py-2 px-10 rounded mb-10 hover:scale-110 transform-gpu border bg-black text-white">LEARN MORE</NavLink>
-            </div>
-    </section>
     
     <div className="justify-center flex-col flex">
       
-      <h1 className="text-4xl font-bold flex justify-center">WELCOME TO JOS CITY</h1>
+      <h1 className="text-4xl mt-10 font-bold flex justify-center">Shopping</h1>
       
       <p className="text-center mt-2">Enjoy the beautiful sights and prepare to have a great time</p>
       
@@ -49,8 +41,8 @@ const Page = ({search}) => {
         <div className="flex justify-center">
           <div className="px-24 flex flex-col justify-center">
             <p className="border border-black w-[4rem] text-center bg-black text-white rounded mb-3">Page</p>
-            <h1 className="font-bold text-3xl">Domino's Pizza & Cold Stone</h1>
-          <p className="">Domino's Pizza and Cold Stone comes in Jos City with all the Pizza and IceCream you can eat.</p>
+            <h1 className="font-bold text-3xl">Top 5 Places to Shop in Jos</h1>
+          <p className="">We've Curated a list of the top 5 places to Shop in Jos. Feel free to Explore.</p>
           <div className="mb-8 mt-3">
                 <NavLink to='/details' className="flex items-center font-semibold hover:text-gray-700">LEARN MORE <CIcon className="h-7 ml-2" icon={cilArrowRight} size=""/></NavLink>
             </div>
@@ -165,17 +157,17 @@ const Page = ({search}) => {
         <p className="font-semibold">No matter what you're into, you'll find the best of it in J City. See upcoming events and other Citywide highlights below.</p>
         
         <div className="mb-14 mt-2">
-          <NavLink to='/injos' className="flex items-center font-bold text-xl transform-gpu hover:text-gray-700">BROWSE ALL THINGS TO DO <CIcon className="h-7 ml-2" icon={cilArrowRight} size=""/></NavLink>
+          <NavLink to='/details' className="flex items-center font-bold text-xl transform-gpu hover:text-gray-700">BROWSE ALL THINGS TO DO <CIcon className="h-7 ml-2" icon={cilArrowRight} size=""/></NavLink>
         </div>
         
         <div className="flex lg:flex-row flex-wrap justify-center flex-col font-semibold text-2xl space-y-4">
                   <NavLink to="/museum" className="pr-5 flex items-center hover:text-gray-700"><CIcon className="h-7 mr-2" icon={cilStar} size=""/>Museums & Galleries <CIcon className="h-7 ml-2" icon={cilArrowRight} size=""/></NavLink>
                   <NavLink to="/tour" className="pr-5 flex items-center hover:text-gray-700"><CIcon className="h-7 mr-2" icon={cilFlagAlt} size=""/>Tours & Attraction <CIcon className="h-7 ml-2 hover:text-gray-700" icon={cilArrowRight} size=""/></NavLink>
-                  <NavLink to="/events" className="pr-5 flex items-center hover:text-gray-700"><CIcon className="h-7 mr-2" icon={cilCalendar} size=""/>Events & Festivals <CIcon className="h-7 ml-2" icon={cilArrowRight} size=""/></NavLink>
+                  <NavLink to="/event" className="pr-5 flex items-center hover:text-gray-700"><CIcon className="h-7 mr-2" icon={cilCalendar} size=""/>Events & Festivals <CIcon className="h-7 ml-2" icon={cilArrowRight} size=""/></NavLink>
                   <NavLink to="/shopping" className="pr-5 flex items-center hover:text-gray-700"><CIcon className="h-7 mr-2" icon={cilBriefcase} size=""/>Shopping <CIcon className="h-7 ml-2" icon={cilArrowRight} size=""/></NavLink>
-                  <NavLink to="/nightlife" className="pr-5 flex items-center hover:text-gray-700"><CIcon className="h-7 mr-2" icon={cilDrinkAlcohol} size=""/>Eat & Drink<CIcon className="h-7 ml-2" icon={cilArrowRight} size=""/></NavLink>
+                  <NavLink to="/eat" className="pr-5 flex items-center hover:text-gray-700"><CIcon className="h-7 mr-2" icon={cilDrinkAlcohol} size=""/>Eat & Drink<CIcon className="h-7 ml-2" icon={cilArrowRight} size=""/></NavLink>
                   <NavLink to="/injos" className="pr-5 flex items-center hover:text-gray-700"><CIcon className="h-7 mr-2" icon={cilHistory} size=""/>Founded By J City <CIcon className="h-7 ml-2" icon={cilArrowRight} size=""/></NavLink>
-                </div>    
+                </div>
       </div>
     </div>
     
@@ -185,10 +177,10 @@ const Page = ({search}) => {
         <div className="flex justify-center">
           <div className="px-24 flex flex-col justify-center">
             <p className="border border-black w-[4rem] text-center bg-black text-white rounded mb-3">Page</p>
-            <h1 className="font-bold text-3xl">Founded By J City</h1>
+            <h1 className="font-bold text-3xl">Events & Festivals</h1>
           <p className="pt-2">Learn about the city's past and how to experience milestones in it's history today.</p>
           <div className="mb-8 mt-3">
-                <NavLink to='/injos' className="flex items-center font-bold hover:text-gray-700">LEARN MORE <CIcon className="h-7 ml-2" icon={cilArrowRight} size=""/></NavLink>
+                <NavLink to='/details' className="flex items-center font-bold hover:text-gray-700">LEARN MORE <CIcon className="h-7 ml-2" icon={cilArrowRight} size=""/></NavLink>
             </div>
           </div>
           
@@ -225,7 +217,7 @@ const Page = ({search}) => {
         <div className="flex justify-center">
           <div className="px-24 flex flex-col justify-center">
             <p className="border border-black w-[4rem] text-center bg-black text-white rounded mb-3">Page</p>
-            <h1 className="font-bold text-3xl">Maps & Guides</h1>
+            <h1 className="font-bold text-3xl">Eat & Drink</h1>
           <p className="pt-2">J City is one of Nigeria's most diverse destinations. Explore the City's many cultural enclaves and see the many landmarks from every angle.</p>
           <div className="mb-8 mt-3">
             <NavLink to='/details' className="flex items-center font-bold hover:text-gray-700">BROWSE ALL MAPS & GUIDES <CIcon className="h-7 ml-2" icon={cilArrowRight} size=""/></NavLink>
@@ -290,4 +282,4 @@ const Page = ({search}) => {
   )
 }
 
-export default Page
+export default Shopij

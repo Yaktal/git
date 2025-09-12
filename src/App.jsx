@@ -14,6 +14,15 @@ import RestaurantDetails from "./components/Pages/RestaurantDetails";
 import EventDetail1 from "./components/Pages/SubPages/Details/EventDetail1";
 import EventDetail2 from "./components/Pages/SubPages/Details/EventDetail2";
 import EventDetail3 from "./components/Pages/SubPages/Details/EventDetail3";
+import InJos from "./components/Pages/InJos";
+import Broadway from "./components/Pages/Museum";
+import Tour from "./components/Pages/Tour";
+import Event from "./components/Pages/Event";
+import Shopij from "./components/Pages/Shopij";
+import Eat from "./components/Pages/Eat";
+import Museum from "./components/Pages/Museum";
+import Wheretostay from "./components/Pages/Wheretostay";
+import Topmuseum from "./components/Pages/Topmuseum";
 
 function App() {
 
@@ -28,15 +37,16 @@ function App() {
         <Routes>
             {/* <Route exact path="/" element={<Home/>}/> */}
             <Route path="/" element={<Page/>} />
-            <Route path="/detail1" element={<EventDetail1/>} />
-            <Route path="/detail2" element={<EventDetail2/>} />
-            <Route path="/detail3" element={<EventDetail3/>} />
+            <Route path="/museum" element={<Museum/>} />
+            <Route path="/tour" element={<Tour/>} />
+            <Route path="/event" element={<Event/>} />
+            <Route path="/eat" element={<Eat/>} />
             <Route path="/current-event" element={<CurrentEvent/>} />
             <Route path="/upcoming-event" element={<UpcomingEvent/>} />
-            <Route path="/now-in-jos" element={<NowIJ/>} />
-            <Route path="/accomodation" element={<Accomodation/>} />
-            <Route path="/attractions" element={<Attractions/>} />
-            <Route path="/shopping" element={<Shopping/>} />
+            <Route path="/injos" element={<InJos/>} />
+            <Route path="/wheretostay" element={<Wheretostay/>} />
+            <Route path="/topmuseum" element={<Topmuseum/>} />
+            <Route path="/shopping" element={<Shopij/>} />
             <Route path="/restaurants" element={<Restaurants/>} />
             <Route path="/hospitals" element={<Hospitals/>} />
             <Route path="/upcoming-events" element={<UpcomingEvent/>} />

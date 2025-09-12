@@ -47,19 +47,19 @@ const Nav = ({}) => {
             {/* <!-- Navigation Links for Desktop --> */}
             <div className=" hidden md:flex gap-4 font-semibold ">
               <div className="relative-group">
-                <NavLink to='/now-in-jos' className="text-black hover:text-green-600 font-poppins">NOW IN JOS</NavLink>
+                <NavLink to='/now-in-jos' className="text-black hover:text-gray-700 font-poppins">NOW IN JOS</NavLink>
               </div>
               <div className="relative-group">
-              <NavLink to='/accomodation' className="text-black hover:text-green-600">HOTELS</NavLink>
+              <NavLink to='/accomodation' className="text-black hover:text-gray-700">HOTELS</NavLink>
               </div>
               <div className="relative group">
-              <NavLink to='/restaurants' className="text-black hover:text-green-600">RESTAURANTS</NavLink>
+              <NavLink to='/restaurants' className="text-black hover:text-gray-700">RESTAURANTS</NavLink>
               </div>
               <div className="relative group">
-              <NavLink to='/shopping' className="text-black hover:text-green-600">SHOPPING</NavLink>
+              <NavLink to='/shopping' className="text-black hover:text-gray-700">SHOPPING</NavLink>
               </div>
               <div className="relative group">
-              <NavLink to='/attractions' className="text-black hover:text-green-600">ATTRACTIONS</NavLink>
+              <NavLink to='/attractions' className="text-black hover:text-gray-700">ATTRACTIONS</NavLink>
               </div>
             </div>
           </div>

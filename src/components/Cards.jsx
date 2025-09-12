@@ -20,7 +20,7 @@ export const cards =[
 
 const Cards = (props) => {
   return (
-    <div className=''>
+    <>
       <div className="p-4">
         <img src={props.img} alt="" />
         <h2 className="text-[1rem] lg:text-2xl font-semibold lg:pt-[6rem]">{props.name}</h2>
@@ -30,7 +30,7 @@ const Cards = (props) => {
       </div>
         
       </div>
-    </div>
+    </>
   )
 }
 
