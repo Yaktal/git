@@ -40,7 +40,7 @@ const Nav = ({}) => {
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="relative focus:outline-none transition"
               >
-                {isMenuOpen===true?<CIcon className="h-7 mr-2 transform transition-transform duration-300 rotate-180" icon={cilX} size=""/>:<CIcon className="h-7 mr-2" icon={cilHamburgerMenu} size=""/>}
+                {isMenuOpen===true?<CIcon className="h-7 mr-2 transform transition-transform duration-300 rotate-180" icon={cilX} />:<CIcon className="h-7 mr-2" icon={cilHamburgerMenu} />}
                 
               </button>
             </div>
@@ -50,16 +50,19 @@ const Nav = ({}) => {
                 <NavLink to='/now-in-jos' className="text-black hover:text-gray-700 font-poppins">NOW IN JOS</NavLink>
               </div>
               <div className="relative-group">
-              <NavLink to='/accomodation' className="text-black hover:text-gray-700">HOTELS</NavLink>
+              <NavLink to='/wheretostay' className="text-black hover:text-gray-700">HOTELS</NavLink>
               </div>
               <div className="relative group">
-              <NavLink to='/restaurants' className="text-black hover:text-gray-700">RESTAURANTS</NavLink>
+              <NavLink to='/eat' className="text-black hover:text-gray-700">RESTAURANTS</NavLink>
               </div>
               <div className="relative group">
               <NavLink to='/shopping' className="text-black hover:text-gray-700">SHOPPING</NavLink>
               </div>
               <div className="relative group">
-              <NavLink to='/attractions' className="text-black hover:text-gray-700">ATTRACTIONS</NavLink>
+              <NavLink to='/museum' className="text-black hover:text-gray-700">ATTRACTIONS</NavLink>
+              </div>
+              <div className="relative group">
+              <NavLink to='/booking' className="text-black hover:text-gray-700">BOOKINGS</NavLink>
               </div>
             </div>
           </div>
@@ -76,23 +79,25 @@ const Nav = ({}) => {
             <div className='font-semibold'>
               
             <div className="relative-group">
-                <NavLink to='/now-in-jos' className="text-black hover:text-gray-700 flex items-center">NOW IN JOS <CIcon className="h-5 ml-2" icon={cilChevronRight} size=""/></NavLink>
+                <NavLink to='/now-in-jos' className="text-black hover:text-gray-700 flex items-center">NOW IN JOS <CIcon className="h-5 ml-2" icon={cilChevronRight} /></NavLink>
               </div>
               <div className='border border-black'></div>
               <div className="relative-group">
-              <NavLink to='/accomodation' className="text-black hover:text-gray-700 flex items-center">WHERE TO STAY <CIcon className="h-5 ml-2 text-danger" icon={cilChevronRight} size=""/></NavLink>
+              <NavLink to='/wheretostay' className="text-black hover:text-gray-700 flex items-center">WHERE TO STAY <CIcon className="h-5 ml-2 text-danger" icon={cilChevronRight} /></NavLink>
               </div>
               <div className='border border-black'></div>
               <div className="relative-group">
-              <NavLink to='/restaurants' className="text-black hover:text-gray-700 flex items-center">EAT & DRINK <CIcon className="h-5 ml-2 text-danger" icon={cilChevronRight} size=""/></NavLink>
+              <NavLink to='/eat' className="text-black hover:text-gray-700 flex items-center">EAT & DRINK <CIcon className="h-5 ml-2 text-danger" icon={cilChevronRight} /></NavLink>
               </div>
               <div className='border border-black'></div>
               <div className="relative-group">
-              <NavLink to='/shopping' className="text-black hover:text-gray-700 flex items-center">SHOPPING <CIcon className="h-5 ml-2 text-danger" icon={cilChevronRight} size=""/></NavLink>
+              <NavLink to='/shopping' className="text-black hover:text-gray-700 flex items-center">SHOPPING <CIcon className="h-5 ml-2 text-danger" icon={cilChevronRight} /></NavLink>
               </div>
               <div className='border border-black'></div>
               <div className="relative-group ">
-              <NavLink to='/attractions' className="text-black hover:text-gray-700 flex items-center">MAPS & GUIDES <CIcon className="h-5 ml-2 text-danger" icon={cilChevronRight} size=""/></NavLink>
+              <NavLink to='/map' className="text-black hover:text-gray-700 flex items-center">MAPS & GUIDES <CIcon className="h-5 ml-2 text-danger" icon={cilChevronRight} /></NavLink>
+              <div className='border border-black'></div>
+              <NavLink to='/booking' className="text-black hover:text-gray-700 flex items-center">BOOKINGS <CIcon className="h-5 ml-2 text-danger" icon={cilChevronRight} /></NavLink>
               </div>
               <div className='border border-black'></div>
             </div>

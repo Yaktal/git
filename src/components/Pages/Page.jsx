@@ -99,7 +99,7 @@ const Page = ({search}) => {
                 <Cards name='Bacardi Restaurant and Cafe' title='11 Dandaura Road, Off Wase Road, GRA, Jos, Plateau'/>
             </div>
             <div className="text-center mt-8">
-                <NavLink to='/Restaurants' className="inline-block bg-black hover:scale-110 transform-gpu font-semibold text-[.95rem] text-white py-2 px-10 rounded border">See All</NavLink>
+                <NavLink to='/eat' className="inline-block bg-black hover:scale-110 transform-gpu font-semibold text-[.95rem] text-white py-2 px-10 rounded border">See All</NavLink>
             </div>
         </div>
       </section>
@@ -228,7 +228,7 @@ const Page = ({search}) => {
             <h1 className="font-bold text-3xl">Maps & Guides</h1>
           <p className="pt-2">J City is one of Nigeria's most diverse destinations. Explore the City's many cultural enclaves and see the many landmarks from every angle.</p>
           <div className="mb-8 mt-3">
-            <NavLink to='/details' className="flex items-center font-bold hover:text-gray-700">BROWSE ALL MAPS & GUIDES <CIcon className="h-7 ml-2" icon={cilArrowRight} size=""/></NavLink>
+            <NavLink to='/map' className="flex items-center font-bold hover:text-gray-700">BROWSE ALL MAPS & GUIDES <CIcon className="h-7 ml-2" icon={cilArrowRight} size=""/></NavLink>
           </div>
           </div>
         </div>

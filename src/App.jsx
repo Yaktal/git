@@ -23,6 +23,11 @@ import Eat from "./components/Pages/Eat";
 import Museum from "./components/Pages/Museum";
 import Wheretostay from "./components/Pages/Wheretostay";
 import Topmuseum from "./components/Pages/Topmuseum";
+import Map from "./components/Pages/Map";
+import Booking from "./components/Pages/Booking";
+import Bookingdetail from "./components/Pages/Tours";
+import Tours from "./components/Pages/Tours";
+import BookingSuccess from "./components/Pages/BookingSuccess";
 
 function App() {
 
@@ -51,6 +56,10 @@ function App() {
             <Route path="/hospitals" element={<Hospitals/>} />
             <Route path="/upcoming-events" element={<UpcomingEvent/>} />
             <Route path="/restaurant-details" element={<RestaurantDetails/>} />
+            <Route path="/map" element={<Map/>} />
+            <Route path="/booking/:id" element={<Booking/>} />
+            <Route path="/tours" element={<Tours/>} />
+            <Route path="/bookingsuccess" element={<BookingSuccess/>} />
             
             
         </Routes>

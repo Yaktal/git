@@ -16,6 +16,7 @@ const Footer =()=>{
                 <li><NavLink to="/restaurants" className="hover:underline">Eat and Drink</NavLink></li>
                 <li><NavLink to="/shopping" className="hover:underline">Shopping</NavLink></li>
                 <li><NavLink to="/attractions" className="hover:underline">Guides and Experiences</NavLink></li>
+                <li><NavLink to="/tours" className="hover:underline">Booking</NavLink></li>
             </ul>
         </div>
         <div>

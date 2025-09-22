@@ -15,7 +15,7 @@ const insertSearch = ({search}) => {
 }
 
 
-const Museum = ({search}) => {
+const Map = ({search}) => {
     
   return (
     <div className={`app font-poppins ${search ? 'no-scroll' : ''}`}>
@@ -31,7 +31,7 @@ const Museum = ({search}) => {
     
     <div className="justify-center flex-col flex">
       
-      <h1 className="text-4xl mt-12 font-bold flex justify-center">Museums & Galleries</h1>
+      <h1 className="text-4xl mt-12 font-bold flex justify-center">Maps</h1>
       
       <p className="text-center mt-2">Enjoy the beautiful sights and prepare to have a great time</p>
       
@@ -282,4 +282,4 @@ const Museum = ({search}) => {
   )
 }
 
-export default Museum
+export default Map
