@@ -1,12 +1,14 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { CIcon } from "@coreui/icons-react";
+import { cilLocationPin } from "@coreui/icons";
 
 export const cards =[
      
   
 ]
 
-const Toppage = ({imageUrl, articleBody, articleHead, altText, articleImg, openingText, header, subHeader}) => {
+const Toppage = ({imageUrl, articleLocation, articleBody, articleHead, altText, articleImg, openingText, header, subHeader}) => {
   return (
     <>
     <div className="flex flex-col">
@@ -27,6 +29,12 @@ const Toppage = ({imageUrl, articleBody, articleHead, altText, articleImg, openi
         <img src={articleImg} alt={articleHead} className="rounded-lg" />
         <h2 className="text-3xl font-bold">{articleHead}</h2>
         <p className="text-gray-700">{articleBody}</p>
+      </div>
+
+      <div className='mt-4'>
+        <a href={articleLocation}>
+          <CIcon className="h-7 mr-2" icon={cilLocationPin} size=""/>
+        </a>
       </div>
     </div>
       

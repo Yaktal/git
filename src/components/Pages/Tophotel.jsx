@@ -17,33 +17,38 @@ const Topmuseum = (  props) => {
         Jos is a popular tourist destination for both local and international visitors. With its temperate climate, picturesque landscapes, and rich cultural heritage, there are plenty of places to explore and things to do in Jos.
 
         Here are 7 best places and things to do in Jos:"
-        articleImg="/Crest.png"
+        articleImg="/crest.jpg"
         articleHead="1. Crest"
-        articleBody="Jos Wildlife Park is a must-visit for animal lovers. The park is home to a variety of wildlife species, including lions, zebras, hyenas, and many more. Visitors can take a guided tour of the park and see the animals up close."
+        articleBody="Crest Hotel is a must-visit for a peaceful environment. The hotel is home to a variety of things to do, including food, tennis, a pool and many more. Visitors can visit to have a nice time."
+        articleLocation="https://maps.app.goo.gl/fvR4r4jQpyGy5f83A"
       />
 
       <Toppage
-        articleImg="/Crispian.png"
-        articleHead="2. Crispian"
-        articleBody="The National Museum in Jos is a great place to learn about the history and culture of Nigeria. The museum has a collection of artifacts, including traditional clothing, pottery, and sculptures."
+        articleImg="/crispan.jpg"
+        articleHead="2. Crispan"
+        articleBody="Crispan Hotel is a must-visit for a peaceful environment. The hotel is home to a variety of things to do, including food, tennis, a pool and many more. Visitors can visit to have a nice time."
+        articleLocation="https://maps.app.goo.gl/mThx2fYCiY5McUUD8"
       />
 
       <Toppage
-        articleImg="/rekta.jpeg"
-        articleHead="3. Rekta"
-        articleBody="The National Museum in Jos is a great place to learn about the history and culture of Nigeria. The museum has a collection of artifacts, including traditional clothing, pottery, and sculptures."
+        articleImg="/lamonde1.jpg"
+        articleHead="3. Lamonde"
+        articleBody="Lamonde Hotel is a must-visit for a peaceful environment. The hotel is home to a variety of things to do, including food, tennis, a pool and many more. Visitors can visit to have a nice time."
+        articleLocation="https://maps.app.goo.gl/RG67FJpGiPZXQ6uq6"
       />
 
       <Toppage
-        articleImg="/city park.jpeg"
-        articleHead="4. City Park"
-        articleBody="The National Museum in Jos is a great place to learn about the history and culture of Nigeria. The museum has a collection of artifacts, including traditional clothing, pottery, and sculptures."
+        articleImg="/hillstation.jpg"
+        articleHead="4. Hill Station"
+        articleBody="Hill Station Hotel is a must-visit for a peaceful environment. The hotel is home to a variety of things to do, including food, tennis, a pool and many more. Visitors can visit to have a nice time."
+        articleLocation="https://maps.app.goo.gl/j5z8RTe1sSM7mXbYA"
       />
         
       <Toppage
-        articleImg="/cologne.jpg"
-        articleHead="5. Cologne"
-        articleBody="The National Museum in Jos is a great place to learn about the history and culture of Nigeria. The museum has a collection of artifacts, including traditional clothing, pottery, and sculptures."
+        articleImg="/valada.jpg"
+        articleHead="5. Valada"
+        articleBody="Valada Hotel is a must-visit for a peaceful environment. The hotel is home to a variety of things to do, including food, tennis, a pool and many more. Visitors can visit to have a nice time."
+        articleLocation="https://maps.app.goo.gl/srXdDbasKaxfmPZF8"
       />
         
       </div>
