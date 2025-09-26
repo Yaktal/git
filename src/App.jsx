@@ -28,6 +28,7 @@ import Booking from "./components/Pages/Booking";
 import Bookingdetail from "./components/Pages/Tours";
 import Tours from "./components/Pages/Tours";
 import BookingSuccess from "./components/Pages/BookingSuccess";
+import Tophotel from "./components/Pages/Tophotel";
 
 function App() {
 
@@ -60,6 +61,7 @@ function App() {
             <Route path="/booking/:id" element={<Booking/>} />
             <Route path="/tours" element={<Tours/>} />
             <Route path="/bookingsuccess" element={<BookingSuccess/>} />
+            <Route path="/tophotel" element={<Tophotel/>} />
             
             
         </Routes>

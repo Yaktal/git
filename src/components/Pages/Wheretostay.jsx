@@ -44,7 +44,7 @@ const Wheretostay = ({search}) => {
             <h1 className="font-bold text-3xl">Top 5 Places to Stay in Jos</h1>
           <p className="">We've Curated a list of the top 5 places to stay in Jos. Feel free to Explore.</p>
           <div className="mb-8 mt-3">
-                <NavLink to='/details' className="flex items-center font-semibold hover:text-gray-700">LEARN MORE <CIcon className="h-7 ml-2" icon={cilArrowRight} size=""/></NavLink>
+                <NavLink to='/tophotel' className="flex items-center font-semibold hover:text-gray-700">LEARN MORE <CIcon className="h-7 ml-2" icon={cilArrowRight} size=""/></NavLink>
             </div>
           </div>
           

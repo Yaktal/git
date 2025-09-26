@@ -62,7 +62,7 @@ const Nav = ({}) => {
               <NavLink to='/museum' className="text-black hover:text-gray-700">ATTRACTIONS</NavLink>
               </div>
               <div className="relative group">
-              <NavLink to='/booking' className="text-black hover:text-gray-700">BOOKINGS</NavLink>
+              <NavLink to='/tours' className="text-black hover:text-gray-700">BOOKINGS</NavLink>
               </div>
             </div>
           </div>
@@ -97,7 +97,7 @@ const Nav = ({}) => {
               <div className="relative-group ">
               <NavLink to='/map' className="text-black hover:text-gray-700 flex items-center">MAPS & GUIDES <CIcon className="h-5 ml-2 text-danger" icon={cilChevronRight} /></NavLink>
               <div className='border border-black'></div>
-              <NavLink to='/booking' className="text-black hover:text-gray-700 flex items-center">BOOKINGS <CIcon className="h-5 ml-2 text-danger" icon={cilChevronRight} /></NavLink>
+              <NavLink to='/tours' className="text-black hover:text-gray-700 flex items-center">BOOKINGS <CIcon className="h-5 ml-2 text-danger" icon={cilChevronRight} /></NavLink>
               </div>
               <div className='border border-black'></div>
             </div>

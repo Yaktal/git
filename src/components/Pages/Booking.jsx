@@ -4,15 +4,32 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import Nav from "../Nav";
 import Footer from "../Footer";
 import ImageSlider from "../ImageSlider";
+import { FlutterWaveButton, closePaymentModal } from "flutterwave-react-v3";
 
 export default function Booking() {
   const { id } = useParams();
   const navigate = useNavigate();
 
+  // ✅ Example tours
   const tours = [
-    { id: "1", name: "Shere Hills Hike", price: "₦5,000", image: "/images/shere.jpg" },
-    { id: "2", name: "Jos Museum Visit", price: "₦3,000", image: "/images/museum.jpg" },
-    { id: "3", name: "Riyom Rock Day Trip", price: "₦8,000", image: "/images/riyom.jpg" },
+    {
+      id: "1",
+      name: "Shere Hills Hike",
+      price: "₦5000",
+      images: ["/Wase-Rock.jpg", "/wildlife.jpeg", "/welcome.jpeg"],
+    },
+    {
+      id: "2",
+      name: "Jos Museum Visit",
+      price: "₦3000",
+      images: ["/veda.jpg", "/zoo.jpeg"],
+    },
+    {
+      id: "3",
+      name: "Riyom Rock Day Trip",
+      price: "₦8000",
+      images: ["/VT.jpeg", "/wildlife.jpeg"],
+    },
   ];
 
   const tour = tours.find((t) => String(t.id) === id);
@@ -22,31 +39,16 @@ export default function Booking() {
     email: "",
     phone: "",
     date: "",
-    payment: "",
   });
 
   const handleChange = (e) => {
     setFormData((s) => ({ ...s, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!tour) return;
-
-    navigate("/bookingsuccess", {
-      state: {
-        ...formData,
-        tourName: tour.name,
-        price: tour.price,
-      },
-    });
-  };
-
   if (!tour) {
     return (
       <div className="min-h-screen flex flex-col">
-        <nav className='h-[8rem]'></nav>
-      <ImageSlider/>
+        <Nav />
         <main className="flex-1 flex items-center justify-center">
           <div className="text-center">
             <h2 className="text-2xl font-bold mb-2">Tour not found</h2>
@@ -60,30 +62,71 @@ export default function Booking() {
     );
   }
 
-  return (
-    <div className="min-h-screen flex flex-col">
-      <nav className="h-[8rem]"></nav>
-      <ImageSlider/>
+  // ✅ Flutterwave config
+  const config = {
+    public_key: "FLWPUBK_TEST-4afa963f6c0820b6ae3bea2783ba9559-X", // replace with your real public key
+    tx_ref: Date.now(),
+    amount: parseInt(tour.price.replace(/[^\d]/g, "")), // strip ₦
+    currency: "NGN",
+    payment_options: "card, banktransfer, ussd",
+    customer: {
+      email: formData.email || "test@example.com",
+      phonenumber: formData.phone || "08012345678",
+      name: formData.name || "Guest User",
+    },
+    customizations: {
+      title: "Jos Tour App Booking",
+      description: `Payment for ${tour.name}`,
+      logo: "/logo.png", // optional: place logo in public folder
+    },
+  };
 
-      {/* Hero */}
-      <div className="relative h-64">
-        <img
-          src={tour.image}
-          alt={tour.name}
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <h1 className="text-3xl text-white font-bold">{tour.name}</h1>
+  const fwConfig = {
+    ...config,
+    text: "Pay & Confirm Booking",
+    callback: (response) => {
+      if (response.status === "successful") {
+        navigate("/booking-success", {
+          state: {
+            ...formData,
+            tourName: tour.name,
+            price: tour.price,
+            paymentId: response.transaction_id,
+          },
+        });
+      }
+      closePaymentModal(); // close modal programmatically
+    },
+    onClose: () => console.log("Payment closed"),
+  };
+
+  // ✅ Only enable payment button when form is complete
+  const isFormComplete =
+    formData.name && formData.email && formData.phone && formData.date;
+
+  return (
+    <div className="min-h-screen flex flex-col bg-gray-50">
+      <nav className="h-[8rem]"></nav>
+
+      {/* Hero with Image Slider */}
+      <div className="relative h-72">
+        <ImageSlider images={tour.images || []} />
+        <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+          <h1 className="text-4xl md:text-5xl text-white font-extrabold">
+            {tour.name}
+          </h1>
         </div>
       </div>
 
       {/* Booking Form */}
-      <main className="flex-1 flex items-start justify-center p-8">
-        <section className="w-full max-w-2xl bg-white rounded shadow p-6">
-          <h2 className="text-2xl font-bold mb-2">Book {tour.name}</h2>
-          <p className="text-lg mb-4">Price: {tour.price}</p>
+      <main className="flex-1 flex justify-center p-6 md:p-12">
+        <section className="w-full max-w-2xl bg-white rounded-2xl shadow-lg p-8">
+          <h2 className="text-3xl font-bold mb-2 text-gray-900">
+            Book Your Spot
+          </h2>
+          <p className="text-lg mb-6 text-gray-600">Price: {tour.price}</p>
 
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form className="space-y-5">
             <input
               type="text"
               name="name"
@@ -91,25 +134,25 @@ export default function Booking() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full border p-2 rounded"
+              className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-teal-500 focus:outline-none"
             />
             <input
               type="email"
               name="email"
-              placeholder="Email"
+              placeholder="Email Address"
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full border p-2 rounded"
+              className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-teal-500 focus:outline-none"
             />
             <input
               type="tel"
               name="phone"
-              placeholder="Phone"
+              placeholder="Phone Number"
               value={formData.phone}
               onChange={handleChange}
               required
-              className="w-full border p-2 rounded"
+              className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-teal-500 focus:outline-none"
             />
             <input
               type="date"
@@ -117,27 +160,29 @@ export default function Booking() {
               value={formData.date}
               onChange={handleChange}
               required
-              className="w-full border p-2 rounded"
+              className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-teal-500 focus:outline-none"
             />
-            <select
-              name="payment"
-              value={formData.payment}
-              onChange={handleChange}
-              required
-              className="w-full border p-2 rounded"
-            >
-              <option value="">Select Payment Method</option>
-              <option value="card">Card</option>
-              <option value="bank">Bank Transfer</option>
-              <option value="cash">Cash</option>
-            </select>
 
-            <button
-              type="submit"
-              className="w-full bg-black text-white py-2 rounded"
-            >
-              Confirm Booking
-            </button>
+            {/* Flutterwave Payment Button */}
+            <FlutterWaveButton
+  {...fwConfig}
+  text="Pay & Confirm Booking"
+  callback={(response) => {
+    console.log(response);
+    if (response.status === "successful") {
+      navigate("/booking-success", {
+        state: {
+          ...formData,
+          tourName: tour.name,
+          price: tour.price,
+          paymentId: response.transaction_id,
+        },
+      });
+    }
+    closePaymentModal();
+  }}
+  onClose={() => console.log("Payment closed")}
+/>
           </form>
         </section>
       </main>
