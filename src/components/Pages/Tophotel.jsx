@@ -9,9 +9,9 @@ const Topmuseum = (  props) => {
         <nav className='h-[9rem]'></nav>
       <div className="flex flex-col p-6 mb-4">
         <Toppage
-        header="Top 5 Museums & Galleries in Jos"
+        header="Top 5 Hotels in Jos"
         subHeader="Enjoy the beautiful sights and prepare to have a great time"
-        imageUrl="/Museum MOTNA.jpg"
+        imageUrl="/Crest.png"
         openingText="Jos has a lot to offer visitors, from its wildlife parks and natural wonders to its rich cultural heritage and historical sites. Whether you’re interested in hiking, wildlife, or history, there’s something for everyone in Jos. 
         
         Jos is a popular tourist destination for both local and international visitors. With its temperate climate, picturesque landscapes, and rich cultural heritage, there are plenty of places to explore and things to do in Jos.
