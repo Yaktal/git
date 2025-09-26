@@ -17,7 +17,7 @@ const Topmuseum = (  props) => {
         Jos is a popular tourist destination for both local and international visitors. With its temperate climate, picturesque landscapes, and rich cultural heritage, there are plenty of places to explore and things to do in Jos.
 
         Here are 7 best places and things to do in Jos:"
-        articleImg="/crest.jpg"
+        articleImg="/crest1.jpg"
         articleHead="1. Crest"
         articleBody="Crest Hotel is a must-visit for a peaceful environment. The hotel is home to a variety of things to do, including food, tennis, a pool and many more. Visitors can visit to have a nice time."
         articleLocation="https://maps.app.goo.gl/fvR4r4jQpyGy5f83A"

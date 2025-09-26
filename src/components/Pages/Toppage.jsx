@@ -31,9 +31,9 @@ const Toppage = ({imageUrl, articleLocation, articleBody, articleHead, altText, 
         <p className="text-gray-700">{articleBody}</p>
       </div>
 
-      <div className='mt-4'>
-        <a href={articleLocation}>
-          <CIcon className="h-7 mr-2" icon={cilLocationPin} size=""/>
+      <div className='mt-4 flex'>
+        <a href={articleLocation} className='flex'>
+          <p>Directions</p><CIcon className="h-7 ml-2" icon={cilLocationPin} size=""/>
         </a>
       </div>
     </div>

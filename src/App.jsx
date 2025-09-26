@@ -29,6 +29,8 @@ import Bookingdetail from "./components/Pages/Tours";
 import Tours from "./components/Pages/Tours";
 import BookingSuccess from "./components/Pages/BookingSuccess";
 import Tophotel from "./components/Pages/Tophotel";
+import Topeat from "./components/Pages/Topeat";
+import Topshopping from "./components/Pages/Topshopping";
 
 function App() {
 
@@ -62,6 +64,8 @@ function App() {
             <Route path="/tours" element={<Tours/>} />
             <Route path="/bookingsuccess" element={<BookingSuccess/>} />
             <Route path="/tophotel" element={<Tophotel/>} />
+            <Route path="/topeat" element={<Topeat/>} />
+            <Route path="/topshopping" element={<Topshopping/>} />
             
             
         </Routes>
