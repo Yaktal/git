@@ -26,7 +26,7 @@ const Cards = (props) => {
         <h2 className="text-[1rem] lg:text-2xl font-semibold lg:pt-[6rem]">{props.name}</h2>
           <p className="pt-[1rem] lg:pt-[1.8rem] text-[.8rem] lg:text-[1rem]">{props.title}</p>
       <div className="pt-[1.8rem] lg:pt-[5rem] pb-[1.5rem]">
-        <NavLink to='/restaurant-details' className="cursor-pointer bg-black px-6 py-2 text-white text-[.8rem] lg:text-[1rem] font-semibold rounded-md hover:bg-white hover:text-black hover:border border">View Details</NavLink>
+        <a href='https://maps.app.goo.gl/yAosnUMHZ5CTRPVAA' className="cursor-pointer bg-black px-6 py-2 text-white text-[.8rem] lg:text-[1rem] font-semibold rounded-md hover:bg-white hover:text-black hover:border border">View Details</a>
       </div>
         
       </div>

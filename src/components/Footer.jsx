@@ -11,11 +11,11 @@ const Footer =()=>{
         <div>
             <h3 className="text-[1rem] lg:text-xl font-medium">J TRAVEL TOUR GUIDE</h3>
             <ul className="mt-4 space-y-2 text-center lg:text-left text-[.8rem] lg:text-[1rem]">
-                <li><NavLink to="/now-in-jos" className="hover:underline">Now In Jos</NavLink></li>
-                <li><NavLink to="/accomodation" className="hover:underline">Where to Stay</NavLink></li>
-                <li><NavLink to="/restaurants" className="hover:underline">Eat and Drink</NavLink></li>
+                <li><NavLink to="/injos" className="hover:underline">Now In Jos</NavLink></li>
+                <li><NavLink to="/wheretostay" className="hover:underline">Where to Stay</NavLink></li>
+                <li><NavLink to="/eat" className="hover:underline">Eat and Drink</NavLink></li>
                 <li><NavLink to="/shopping" className="hover:underline">Shopping</NavLink></li>
-                <li><NavLink to="/attractions" className="hover:underline">Guides and Experiences</NavLink></li>
+                <li><NavLink to="/museum" className="hover:underline">Museums</NavLink></li>
                 <li><NavLink to="/tours" className="hover:underline">Booking</NavLink></li>
             </ul>
         </div>

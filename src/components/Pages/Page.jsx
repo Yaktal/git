@@ -52,7 +52,7 @@ const Page = ({search}) => {
             <h1 className="font-bold text-3xl">Domino's Pizza & Cold Stone</h1>
           <p className="">Domino's Pizza and Cold Stone comes in Jos City with all the Pizza and IceCream you can eat.</p>
           <div className="mb-8 mt-3">
-                <NavLink to='/details' className="flex items-center font-semibold hover:text-gray-700">LEARN MORE <CIcon className="h-7 ml-2" icon={cilArrowRight} size=""/></NavLink>
+                <NavLink to='/topeat' className="flex items-center font-semibold hover:text-gray-700">LEARN MORE <CIcon className="h-7 ml-2" icon={cilArrowRight} size=""/></NavLink>
             </div>
           </div>
           
@@ -99,7 +99,7 @@ const Page = ({search}) => {
                 <Cards name='Bacardi Restaurant and Cafe' title='11 Dandaura Road, Off Wase Road, GRA, Jos, Plateau'/>
             </div>
             <div className="text-center mt-8">
-                <NavLink to='/eat' className="inline-block bg-black hover:scale-110 transform-gpu font-semibold text-[.95rem] text-white py-2 px-10 rounded border">See All</NavLink>
+                <NavLink to='/topeat' className="inline-block bg-black hover:scale-110 transform-gpu font-semibold text-[.95rem] text-white py-2 px-10 rounded border">See All</NavLink>
             </div>
         </div>
       </section>

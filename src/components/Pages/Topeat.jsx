@@ -38,10 +38,10 @@ const Topeat = ( props) => {
       />
 
       <Toppage
-        articleImg="/karisa.jpg"
-        articleHead="4. Karisa Ristorante"
+        articleImg="/Frame 43.png"
+        articleHead="4. Bacardi Restaurant and Cafe"
         articleBody="Hill Station Hotel is a must-visit for a peaceful environment. The hotel is home to a variety of things to do, including food, tennis, a pool and many more. Visitors can visit to have a nice time."
-        articleLocation="https://maps.app.goo.gl/oa8ZaeLyJ1N2BUY97"
+        articleLocation="https://maps.app.goo.gl/yAosnUMHZ5CTRPVAA"
       />
         
       <Toppage
